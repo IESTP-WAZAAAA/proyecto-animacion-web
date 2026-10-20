@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAnimates Academy | Academia de Animación & Desarrollo Web</title>
+    <meta name="description" content="Aprende Animación Web, CSS3, JavaScript, GSAP, SVG y 3D en EduAnimates Academy. Cursos prácticos con docentes expertos.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/Media/LOGO.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/estilos.css">
+</head>
+<body>
+
+    <!-- NAVBAR STICKY -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center py-1" href="#hero">
+                <img src="/Media/LOGO.png" alt="EduAnimates - IESTP TRUJILLO TECH"
+                    style="height: 80px; width: auto; object-fit: contain;">
+            </a>
+
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fs-3 text-cyan"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#silabo">Sílabo Interactivo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#docentes">Docentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="btn btn-link text-light text-decoration-none fw-semibold" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Iniciar Sesión
+                    </button>
+                    <button class="btn btn-gradient btn-sm" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        <i class="fa-solid fa-user-plus me-1"></i> Registrarse
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN A: HERO / PORTADA PRINCIPAL -->
+    <section id="hero" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6">
+                    <div class="hero-badge mb-3">
+                        <i class="fa-solid fa-certificate"></i> Licenciado RVM • Edu Animate
+                    </div>
+                    <h1 class="display-4 fw-extrabold text-white mb-3 lh-sm">
+                        Aprende <span class="text-gradient">Animación Web</span>, transforma la experiencia digital.
+                    </h1>
+                    <p class="lead text-muted mb-4 fs-6">
+                        Domina HTML5, CSS3 avanzado, JavaScript, GSAP, SVG y animaciones 3D. Desarrolla sitios
+                        interactivos de alto rendimiento con los principios de UX/UI solicitados por la industria tech
+                        global.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 mb-5">
+                        <a href="#cursos" class="btn btn-gradient">
+                            <i class="fa-solid fa-rocket me-2"></i>Explorar Cursos
+                        </a>
+                        <a href="#silabo" class="btn btn-outline-custom">
+                            <i class="fa-solid fa-laptop-code me-2"></i>Ver Sílabo Interactivo
+                        </a>
+                    </div>
+
+                    <!-- Indicadores de Confianza -->
+                    <div class="row g-3 border-top border-secondary border-opacity-25 pt-4">
+                        <div class="col-4">
+                            <h3 class="fw-bold text-gradient mb-0 counter" data-target="1250">0</h3>
+                            <span class="text-muted small">Estudiantes Activos</span>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold text-gradient mb-0 counter" data-target="18">0</h3>
+                            <span class="text-muted small">Semanas de Formación</span>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold text-gradient mb-0 counter" data-target="98">0</h3>
+                            <span class="text-muted small">% Empleabilidad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elemento Interactivo 3D Floating Code Screen -->
+                <div class="col-lg-6">
+                    <div class="hero-3d-card">
+                        <div class="hero-3d-inner">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="code-window-dots">
+                                        <span class="dot dot-red"></span>
+                                        <span class="dot dot-yellow"></span>
+                                        <span class="dot dot-green"></span>
+                                    </div>
+                                    <span
+                                        class="badge bg-secondary bg-opacity-50 text-cyan font-monospace small">animation.js</span>
+                                </div>
+                                <pre class="text-light font-monospace small mb-0"
+                                    style="font-size: 0.85rem; line-height: 1.5;">
+<span style="color: #ff79c6;">import</span> { gsap } <span style="color: #ff79c6;">from</span> <span style="color: #f1fa8c;">'gsap'</span>;
+
+<span style="color: #6272a4;">// Animación Web con Keyframes & ScrollTrigger</span>
+<span style="color: #50fa7b;">gsap</span>.<span style="color: #50fa7b;">to</span>(<span style="color: #f1fa8c;">'.card-hero'</span>, {
+  <span style="color: #8be9fd;">rotateY</span>: <span style="color: #bd93f9;">360</span>,
+  <span style="color: #8be9fd;">duration</span>: <span style="color: #bd93f9;">2</span>,
+  <span style="color: #8be9fd;">ease</span>: <span style="color: #f1fa8c;">'elastic.out(1, 0.5)'</span>,
+  <span style="color: #8be9fd;">scrollTrigger</span>: <span style="color: #f1fa8c;">'#trigger-section'</span>
+});</pre>
+                            </div>
+
+                            <div
+                                class="d-flex align-items-center justify-content-between bg-dark bg-opacity-50 p-3 rounded-3 mt-3 border border-secondary border-opacity-25">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="spinner-grow text-info spinner-grow-sm" role="status"></div>
+                                    <div>
+                                        <div class="fw-bold text-white small">Módulo Actual: Keyframes & 3D Transforms
+                                        </div>
+                                        <div class="text-muted extra-small" style="font-size: 0.75rem;">Dictado por Mg.
+                                            Pedro León Alva & Prof. Ronald Pérez</div>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success bg-opacity-25 text-success">EN VIVO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN B: MISIÓN Y VISIÓN INSTITUCIONAL -->
+    <section id="nosotros" class="py-5 bg-dark-2">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="text-cyan text-uppercase fw-bold tracking-wide small">Nuestra Institución</span>
+                <h2 class="fw-bold text-white display-6 mt-1">Formación Superior en Diseño y Programación Web</h2>
+                <p class="text-muted">"Edu Animate" impulsa la excelencia académica capacitando a la nueva
+                    generación de desarrolladores Front-End y Animadores Web.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="bg-card-custom p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="p-3 bg-primary bg-opacity-10 text-primary rounded-4 fs-3">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </div>
+                                <h3 class="h4 text-white fw-bold mb-0">Nuestra Misión</h3>
+                            </div>
+                            <p class="text-muted leading-relaxed">
+                                Capacitar integralmente a los estudiantes mediante una enseñanza altamente práctica,
+                                guiada por los principios fundamentales del movimiento, usabilidad y tecnologías
+                                Front-End del lado del cliente. Facilitamos el desarrollo de proyectos dinámicos y
+                                funcionales orientados a satisfacer la alta demanda tecnológica del mercado.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 text-cyan small fw-semibold">
+                            <i class="fa-solid fa-check-circle me-1"></i> Aprendizaje basado en proyectos reales
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="bg-card-custom p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="p-3 bg-info bg-opacity-10 text-info rounded-4 fs-3">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <h3 class="h4 text-white fw-bold mb-0">Nuestra Visión</h3>
+                            </div>
+                            <p class="text-muted leading-relaxed">
+                                Ser la academia virtual e institución pública de referencia a nivel nacional e
+                                internacional en la formación de profesionales especializados en Animación Web,
+                                interfaces interactivas 2D/3D y UX/UI, reconocidos por su capacidad de innovación, rigor
+                                técnico y contribución al desarrollo tecnológico.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 text-cyan small fw-semibold">
+                            <i class="fa-solid fa-star me-1"></i> Innovación y excelencia en Front-End
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN C: TEMARIO INTERACTIVO DEL SÍLABO (Demostración Práctica) -->
+    <section id="silabo" class="py-5">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="text-cyan text-uppercase fw-bold tracking-wide small">Sílabo Oficial 2026-II</span>
+                <h2 class="fw-bold text-white display-6 mt-1">Laboratorio Interactivo de Animación Web</h2>
+                <p class="text-muted">Prueba en vivo los módulos conceptuales e indicadores de logro desarrollados
+                    durante la Unidad Didáctica.</p>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                <!-- Navegador de Módulos del Sílabo -->
+                <div class="col-lg-5">
+                    <div class="d-flex flex-column gap-2" role="tablist">
+                        <button class="syllabus-tab-btn active" onclick="switchSyllabusDemo('m1', this)">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span><i class="fa-solid fa-stopwatch me-2 text-info"></i>Sesiones 1-2: Timing &
+                                    Ritmo</span>
+                                <span class="badge bg-primary bg-opacity-25 text-info">2D</span>
+                            </div>
+                        </button>
+
+                        <button class="syllabus-tab-btn" onclick="switchSyllabusDemo('m2', this)">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span><i class="fa-solid fa-cube me-2 text-warning"></i>Sesiones 6-7: Transforms 2D /
+                                    3D</span>
+                                <span class="badge bg-warning bg-opacity-25 text-warning">CSS3</span>
+                            </div>
+                        </button>
+
+                        <button class="syllabus-tab-btn" onclick="switchSyllabusDemo('m3', this)">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span><i class="fa-solid fa-clapperboard me-2 text-danger"></i>Sesiones 9-10: Keyframes
+                                    & Loaders</span>
+                                <span class="badge bg-danger bg-opacity-25 text-danger">Micro</span>
+                            </div>
+                        </button>
+
+                        <button class="syllabus-tab-btn" onclick="switchSyllabusDemo('m4', this)">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span><i class="fa-brands fa-js me-2 text-warning"></i>Sesiones 11-12: JS Eventos &
+                                    DOM</span>
+                                <span class="badge bg-warning text-dark">JS</span>
+                            </div>
+                        </button>
+
+                        <button class="syllabus-tab-btn" onclick="switchSyllabusDemo('m5', this)">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span><i class="fa-solid fa-wand-magic-sparkles me-2 text-success"></i>Sesiones 13-14:
+                                    GSAP & SVG Anim</span>
+                                <span class="badge bg-success bg-opacity-25 text-success">GSAP</span>
+                            </div>
+                        </button>
+
+                        <button class="syllabus-tab-btn" onclick="switchSyllabusDemo('m6', this)">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span><i class="fa-solid fa-gauge-high me-2 text-cyan"></i>Sesión 16: Optimización &
+                                    UX</span>
+                                <span class="badge bg-info bg-opacity-25 text-cyan">60 FPS</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Visor / Playground de Demostración Práctica -->
+                <div class="col-lg-7">
+                    <div class="demo-box" id="demoPlayground">
+
+                        <!-- Demo M1: Timing & Easing -->
+                        <div id="demo-m1" class="syllabus-demo-content text-center w-100">
+                            <h4 class="fw-bold text-white mb-2">Principios de Movimiento: Timing & Anticipación</h4>
+                            <p class="text-muted small mb-4">Ajusta la velocidad y función de tiempo (Easing) para ver
+                                cómo afecta el movimiento natural.</p>
+
+                            <div class="d-flex justify-content-center align-items-center mb-4"
+                                style="height: 120px; background: rgba(0,0,0,0.3); border-radius: 12px; position: relative;">
+                                <div id="timingBox" class="anim-target-box">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                                <button class="btn btn-sm btn-outline-info"
+                                    onclick="playTiming('linear')">Linear</button>
+                                <button class="btn btn-sm btn-outline-info"
+                                    onclick="playTiming('ease-in-out')">Ease-In-Out</button>
+                                <button class="btn btn-sm btn-outline-info"
+                                    onclick="playTiming('cubic-bezier(0.68, -0.55, 0.27, 1.55)')">Anticipation /
+                                    Bounce</button>
+                            </div>
+                        </div>
+
+                        <!-- Demo M2: Transformaciones 2D/3D -->
+                        <div id="demo-m2" class="syllabus-demo-content text-center w-100 d-none">
+                            <h4 class="fw-bold text-white mb-2">Transformaciones 2D/3D (Rotate, Scale, Skew)</h4>
+                            <p class="text-muted small mb-3">Interactúa con la tarjeta 3D o ajusta los controles de
+                                perspectiva.</p>
+
+                            <div class="d-flex justify-content-center my-3">
+                                <div class="flip-card" id="interactiveFlipCard"
+                                    onclick="this.classList.toggle('flipped')">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <i class="fa-solid fa-rotate-3d fs-1 text-cyan mb-2"></i>
+                                            <span class="fw-bold small">Haz clic para Girar 3D</span>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <i class="fa-solid fa-check-double fs-1 text-white mb-2"></i>
+                                            <span class="fw-bold small">¡Transformación CSS3 Exitosa!</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-muted extra-small"><i class="fa-solid fa-info-circle me-1"></i>Usa
+                                `transform-style: preserve-3d` y `perspective`.</span>
+                        </div>
+
+                        <!-- Demo M3: Keyframes & Microinteracciones -->
+                        <div id="demo-m3" class="syllabus-demo-content text-center w-100 d-none">
+                            <h4 class="fw-bold text-white mb-2">Keyframes CSS & Microinteracciones</h4>
+                            <p class="text-muted small mb-4">Ejemplos de Loaders y elementos animados con fotogramas
+                                clave `@keyframes`.</p>
+
+                            <div class="d-flex justify-content-center align-items-center gap-4 mb-4">
+                                <div class="pulse-animated p-4 rounded-circle bg-primary text-white fs-3">
+                                    <i class="fa-solid fa-bell"></i>
+                                </div>
+                                <div class="spinner-border text-cyan" style="width: 3rem; height: 3rem;" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <button class="btn btn-gradient pulse-animated">
+                                    Botón CTA Animado
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Demo M4: JS DOM & Mouse Tracking -->
+                        <div id="demo-m4" class="syllabus-demo-content text-center w-100 d-none">
+                            <h4 class="fw-bold text-white mb-2">JavaScript & Eventos del DOM</h4>
+                            <p class="text-muted small mb-3">Mueve el mouse dentro de este recuadro para ver el cálculo
+                                dinámico de posición X/Y.</p>
+
+                            <div id="mouseArea"
+                                class="p-4 bg-dark rounded-3 border border-secondary text-cyan font-monospace mb-2"
+                                style="cursor: crosshair;">
+                                Posición Mouse: X: <span id="mouseX">0</span>px | Y: <span id="mouseY">0</span>px
+                            </div>
+                            <span class="text-muted extra-small">Escuchando eventos `mousemove` y manipulando el
+                                DOM.</span>
+                        </div>
+
+                        <!-- Demo M5: GSAP & SVG Animation -->
+                        <div id="demo-m5" class="syllabus-demo-content text-center w-100 d-none">
+                            <h4 class="fw-bold text-white mb-2">Animaciones vectoriales SVG & GSAP</h4>
+                            <p class="text-muted small mb-3">Trazo vectorial dinámico de SVG mediante motor de
+                                animación.</p>
+
+                            <svg width="120" height="120" viewBox="0 0 100 100" class="mb-3">
+                                <circle id="svgCircle" cx="50" cy="50" r="40" stroke="#00f2fe" stroke-width="6"
+                                    fill="none" stroke-dasharray="251" stroke-dashoffset="0" />
+                            </svg>
+                            <div>
+                                <button class="btn btn-sm btn-outline-custom" onclick="animateSVG()">Re-animar Trazo
+                                    SVG</button>
+                            </div>
+                        </div>
+
+                        <!-- Demo M6: Optimización & Rendimiento -->
+                        <div id="demo-m6" class="syllabus-demo-content text-center w-100 d-none">
+                            <h4 class="fw-bold text-white mb-2">Optimización, Rendimiento y Accesibilidad</h4>
+                            <p class="text-muted small mb-3">Aceleración por GPU (`will-change`, `transform3d`) y
+                                soporte `prefers-reduced-motion`.</p>
+
+                            <div class="row g-2 text-start small max-w-500 mx-auto">
+                                <div class="col-6 bg-dark p-2 rounded border border-secondary">
+                                    <span class="text-success fw-bold"><i class="fa-solid fa-gauge me-1"></i>FPS
+                                        Target:</span> 60 FPS
+                                </div>
+                                <div class="col-6 bg-dark p-2 rounded border border-secondary">
+                                    <span class="text-info fw-bold"><i class="fa-solid fa-microchip me-1"></i>GPU
+                                        Boost:</span> Activo
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN D: CURSOS DESTACADOS -->
+    <section id="cursos" class="py-5 bg-dark-2">
+        <div class="container py-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+                <div>
+                    <span class="text-cyan text-uppercase fw-bold tracking-wide small">Catálogo de Cursos</span>
+                    <h2 class="fw-bold text-white display-6 mt-1">Cursos Especializados Front-End</h2>
+                </div>
+
+                <!-- Filtros Interactivos por Categoría -->
+                <div class="d-flex gap-2 flex-wrap mt-3 mt-md-0">
+                    <button class="btn-filter active" onclick="filterCourses('all', this)">Todos</button>
+                    <button class="btn-filter" onclick="filterCourses('anim', this)">Animación CSS/JS</button>
+                    <button class="btn-filter" onclick="filterCourses('dev', this)">Desarrollo Web</button>
+                    <button class="btn-filter" onclick="filterCourses('3d', this)">3D & GSAP</button>
+                </div>
+            </div>
+
+            <!-- Grilla de Tarjetas de Cursos -->
+            <div class="row g-4" id="coursesGrid">
+
+                <!-- Curso 1 -->
+                <div class="col-md-6 col-lg-4 course-item" data-category="anim">
+                    <div class="bg-card-custom h-100 d-flex flex-column justify-content-between position-relative">
+                        <span class="course-badge">Principiante - Intermedio</span>
+                        <div class="course-img-wrapper">
+                            <img src="/Media/imagen3.jpg"
+                                alt="Curso de Animación Web CSS3 y JS"
+                                onerror="this.src='https://placehold.co/600x400/172a45/00f2fe?text=Animacion+Web'">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <div class="text-cyan small fw-semibold mb-1">Animación Web</div>
+                            <h3 class="h5 text-white fw-bold mb-2">Animación Web Interactiva con HTML5 & CSS3</h3>
+                            <p class="text-muted small mb-3">Aprende los principios del movimiento, timing, keyframes y
+                                microinteracciones de interfaz de usuario.</p>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                                    alt="Prof. Ronald Pérez" class="rounded-circle"
+                                    style="width: 32px; height: 32px; object-fit: cover;">
+                                <span class="small text-light">Prof. Ronald Pérez H.</span>
+                            </div>
+
+                            <div
+                                class="d-flex justify-content-between align-items-center text-muted small border-top border-secondary border-opacity-25 pt-3 mt-auto">
+                                <div><i class="fa-solid fa-star text-warning me-1"></i>4.9 (128)</div>
+                                <div><i class="fa-solid fa-clock me-1"></i>96 Horas</div>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-white fs-5">S/ 190.00</span>
+                            <button class="btn btn-sm btn-gradient"
+                                onclick="openCourseModal('Animación Web Interactiva con HTML5 & CSS3', 'Prof. Ronald Pérez H.', 'S/ 190.00', 'En este curso dominarás desde las transiciones básicas hasta las transformaciones 2D/3D y keyframes avanzados.')">Ver
+                                Curso</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 2 -->
+                <div class="col-md-6 col-lg-4 course-item" data-category="3d">
+                    <div class="bg-card-custom h-100 d-flex flex-column justify-content-between position-relative">
+                        <span class="course-badge">Avanzado</span>
+                        <div class="course-img-wrapper">
+                            <img src="/Media/imagen2.jpg"
+                                alt="Curso de GSAP y SVG"
+                                onerror="this.src='https://placehold.co/600x400/172a45/00f2fe?text=GSAP+and+SVG'">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <div class="text-cyan small fw-semibold mb-1">GSAP & SVG</div>
+                            <h3 class="h5 text-white fw-bold mb-2">Master en GSAP 3, ScrollTrigger & Vector SVG</h3>
+                            <p class="text-muted small mb-3">Crea secuencias complejas de animación, efectos basados en
+                                scroll y dibujo de vectores SVG.</p>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                                    alt="Mg. Pedro León Alva" class="rounded-circle"
+                                    style="width: 32px; height: 32px; object-fit: cover;">
+                                <span class="small text-light">Mg. Pedro León Alva</span>
+                            </div>
+
+                            <div
+                                class="d-flex justify-content-between align-items-center text-muted small border-top border-secondary border-opacity-25 pt-3 mt-auto">
+                                <div><i class="fa-solid fa-star text-warning me-1"></i>5.0 (94)</div>
+                                <div><i class="fa-solid fa-clock me-1"></i>80 Horas</div>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-white fs-5">S/ 240.00</span>
+                            <button class="btn btn-sm btn-gradient"
+                                onclick="openCourseModal('Master en GSAP 3, ScrollTrigger & Vector SVG', 'Mg. Pedro León Alva', 'S/ 240.00', 'Aprenderás a construir experiencias inmersivas con GSAP Timeline, ScrollTrigger y optimización de gráficos vectoriales SVG.')">Ver
+                                Curso</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 3 -->
+                <div class="col-md-6 col-lg-4 course-item" data-category="dev">
+                    <div class="bg-card-custom h-100 d-flex flex-column justify-content-between position-relative">
+                        <span class="course-badge">Intermedio</span>
+                        <div class="course-img-wrapper">
+                            <img src="/Media/imagen1.jpg"
+                                alt="Curso Desarrollo Web Front End"
+                                onerror="this.src='https://placehold.co/600x400/172a45/00f2fe?text=FrontEnd+Dev'">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <div class="text-cyan small fw-semibold mb-1">Front-End Architecture</div>
+                            <h3 class="h5 text-white fw-bold mb-2">Desarrollo Web Moderno con Bootstrap 5 & JS</h3>
+                            <p class="text-muted small mb-3">Construye maquetas totalmente adaptables y dinámicas
+                                integrando manipulaciones avanzadas del DOM.</p>
+
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                                    alt="Prof. Ronald Pérez" class="rounded-circle"
+                                    style="width: 32px; height: 32px; object-fit: cover;">
+                                <span class="small text-light">Prof. Ronald Pérez H.</span>
+                            </div>
+
+                            <div
+                                class="d-flex justify-content-between align-items-center text-muted small border-top border-secondary border-opacity-25 pt-3 mt-auto">
+                                <div><i class="fa-solid fa-star text-warning me-1"></i>4.8 (110)</div>
+                                <div><i class="fa-solid fa-clock me-1"></i>120 Horas</div>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-white fs-5">S/ 210.00</span>
+                            <button class="btn btn-sm btn-gradient"
+                                onclick="openCourseModal('Desarrollo Web Moderno con Bootstrap 5 & JS', 'Prof. Ronald Pérez H.', 'S/ 210.00', 'Aprende maquetación responsiva, CSS Grid, Flexbox y programación orientada a eventos para el desarrollo del lado del cliente.')">Ver
+                                Curso</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN E: ¿POR QUÉ MATRICULARTE CON NOSOTROS? -->
+    <section id="beneficios" class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-5">
+                    <span class="text-cyan text-uppercase fw-bold tracking-wide small">Beneficios Académicos</span>
+                    <h2 class="fw-bold text-white display-6 mt-1 mb-3">¿Por qué estudiar en EduAnimates Academy?</h2>
+                    <p class="text-muted mb-4">
+                        Nuestra propuesta combina la solidez pedagógica del IESTP Trujillo con la innovación tecnológica
+                        moderna para garantizar una inserción laboral exitosa.
+                    </p>
+
+                    <div
+                        class="p-3 bg-dark-card rounded-4 border border-secondary border-opacity-25 d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-award text-gold fs-1"></i>
+                        <div>
+                            <div class="fw-bold text-white">Certificación Oficial Licenciada</div>
+                            <div class="text-muted small">Respaldado por la Resolución Viceministerial RVM.
+                                162-2025-MINEDU.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="bg-card-custom p-4 h-100">
+                                <div class="text-cyan fs-3 mb-3"><i class="fa-solid fa-chalkboard-user"></i></div>
+                                <h4 class="h5 text-white fw-bold mb-2">Docentes Calificados</h4>
+                                <p class="text-muted small mb-0">Especialistas con amplia trayectoria en el sector
+                                    industrial tecnológico y educativo.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="bg-card-custom p-4 h-100">
+                                <div class="text-cyan fs-3 mb-3"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                                <h4 class="h5 text-white fw-bold mb-2">Aprendizaje Flexible</h4>
+                                <p class="text-muted small mb-0">Acceso a laboratorios virtuales, materiales
+                                    asincrónicos y tutorías personalizadas.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="bg-card-custom p-4 h-100">
+                                <div class="text-cyan fs-3 mb-3"><i class="fa-solid fa-code-commit"></i></div>
+                                <h4 class="h5 text-white fw-bold mb-2">Proyectos Reales</h4>
+                                <p class="text-muted small mb-0">Desarrollas un portafolio profesional completo de
+                                    animación web como producto integrador.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="bg-card-custom p-4 h-100">
+                                <div class="text-cyan fs-3 mb-3"><i class="fa-solid fa-microchip"></i></div>
+                                <h4 class="h5 text-white fw-bold mb-2">Tecnologías Actualizadas</h4>
+                                <p class="text-muted small mb-0">Sílabo constantemente actualizado con las últimas
+                                    versiones de GSAP, CSS Grid y JS ES6+.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN F: DOCENTES CALIFICADOS -->
+    <section id="docentes" class="py-5 bg-dark-2">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="text-cyan text-uppercase fw-bold tracking-wide small">Plana Docente</span>
+                <h2 class="fw-bold text-white display-6 mt-1">Aprende de Expertos en la Industria</h2>
+                <p class="text-muted">Docentes responsables de la Unidad Didáctica de Animación Web en el IESTP
+                    Trujillo.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Docente 1 -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-card-custom p-4 text-center">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                            alt="Prof. Ronald Pérez Hernández" class="teacher-img mb-3"
+                            onerror="this.src='https://placehold.co/150x150/172a45/00f2fe?text=Ronald+Perez'">
+                        <h3 class="h5 text-white fw-bold mb-1">Prof. Ronald Pérez Hernández</h3>
+                        <div class="text-cyan small fw-semibold mb-3">Especialista en Animación Front-End & UI</div>
+                        <p class="text-muted small mb-3">
+                            Experto en maquetación HTML5, animaciones CSS3, efectos decorativos y funcionales para la
+                            optimización de interfaces dinámicas.
+                        </p>
+                        <div class="d-flex justify-content-center gap-2 mb-3">
+                            <span class="badge bg-secondary bg-opacity-25 text-light">CSS Transforms</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-light">Keyframes</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-light">UX/UI</span>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3 text-muted">
+                            <a href="#" class="text-muted hover-cyan"><i class="fa-brands fa-linkedin fs-5"></i></a>
+                            <a href="#" class="text-muted hover-cyan"><i class="fa-brands fa-github fs-5"></i></a>
+                            <a href="mailto:rperezhernandez@iestptrujillo.net" class="text-muted hover-cyan"><i
+                                    class="fa-solid fa-envelope fs-5"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Docente 2 -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-card-custom p-4 text-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+                            alt="Mg. Pedro Esgardo León Alva" class="teacher-img mb-3"
+                            onerror="this.src='https://placehold.co/150x150/172a45/00f2fe?text=Pedro+Leon'">
+                        <h3 class="h5 text-white fw-bold mb-1">Mg. Pedro Esgardo León Alva</h3>
+                        <div class="text-cyan small fw-semibold mb-3">Magíster en Tecnologías Web & JS Advanced</div>
+                        <p class="text-muted small mb-3">
+                            Especialista en manipulación interactiva del DOM con JavaScript, integración de librerías
+                            avanzadas como GSAP y animaciones vectoriales SVG.
+                        </p>
+                        <div class="d-flex justify-content-center gap-2 mb-3">
+                            <span class="badge bg-secondary bg-opacity-25 text-light">JavaScript ES6+</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-light">GSAP 3</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-light">SVG & 3D</span>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3 text-muted">
+                            <a href="#" class="text-muted hover-cyan"><i class="fa-brands fa-linkedin fs-5"></i></a>
+                            <a href="#" class="text-muted hover-cyan"><i class="fa-brands fa-github fs-5"></i></a>
+                            <a href="mailto:pleonalva@iesptrujillo.edu.pe" class="text-muted hover-cyan"><i
+                                    class="fa-solid fa-envelope fs-5"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN G: COMENTARIOS Y TESTIMONIOS -->
+    <section id="testimonios" class="py-5">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="text-cyan text-uppercase fw-bold tracking-wide small">Experiencias de Alumnos</span>
+                <h2 class="fw-bold text-white display-6 mt-1">Lo que dicen nuestros estudiantes</h2>
+            </div>
+
+            <!-- Carrusel Funcional de Testimonios -->
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner max-w-800 mx-auto">
+
+                    <div class="carousel-item active">
+                        <div class="testimonial-card text-center">
+                            <i class="fa-solid fa-quote-right quote-icon"></i>
+                            <div class="d-flex justify-content-center text-warning mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="lead text-light mb-4 fs-6 fst-italic">
+                                "El curso de Animación Web superó mis expectativas. Aprender a dominar los keyframes y
+                                GSAP con ejemplos prácticos me permitió conseguir mi primer empleo como maquetador
+                                Front-End."
+                            </p>
+                            <h4 class="h6 text-white fw-bold mb-0">Carlos Mendoza</h4>
+                            <span class="text-muted small">Estudiante del Módulo de Diseño y Programación Web</span>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="testimonial-card text-center">
+                            <i class="fa-solid fa-quote-right quote-icon"></i>
+                            <div class="d-flex justify-content-center text-warning mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="lead text-light mb-4 fs-6 fst-italic">
+                                "La metodología de los docentes Ronald Pérez y Pedro León es excepcional. Las sesiones
+                                de laboratorios con transformaciones 3D y eventos de JS hacen que todo sea muy
+                                intuitivo."
+                            </p>
+                            <h4 class="h6 text-white fw-bold mb-0">Sofía Valderrama</h4>
+                            <span class="text-muted small">Egresada de IESTP Trujillo</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Botones Controles del Carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon p-3 bg-dark rounded-circle border border-secondary"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon p-3 bg-dark rounded-circle border border-secondary"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN H: PIE DE PÁGINA (FOOTER) -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <!-- Columna 1: Brand Info -->
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
+                        <!-- Contenedor blanco para dar contraste al logo sobre el fondo oscuro -->
+                        <div class="bg-white rounded-circle p-1 d-flex align-items-center justify-content-center shadow-sm"
+                            style="width: 44px; height: 44px; min-width: 44px;">
+                            <img src="/Media/LOGO.png" alt="Logo EduAnimates"
+                                style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        </div>
+                        <!-- Identificador de la institución -->
+                        <div class="d-flex flex-column justify-content-center ms-1">
+                            <span class="fw-bold text-white lh-1 fs-5">EduAnimates</span>
+                        </div>
+                    </a>
+                    <p class="text-muted small mb-3">
+                        Academia virtual del Programa de Estudios de Diseño y Programación Web del IESTP "TRUJILLO".
+                        Licenciado mediante RVM. 162-2025-MINEDU.
+                    </p>
+                    <div class="text-muted small">
+                        <p class="mb-1"><i class="fa-solid fa-location-dot me-2 text-cyan"></i>Trujillo, La Libertad -
+                            Perú</p>
+                        <p class="mb-0"><i
+                                class="fa-solid fa-envelope me-2 text-cyan"></i>rperezhernandez@iestptrujillo.net</p>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div class="col-6 col-lg-2">
+                    <h4 class="h6 text-white fw-bold mb-3">Navegación</h4>
+                    <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+                        <li><a href="#hero" class="text-muted text-decoration-none hover-cyan">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-muted text-decoration-none hover-cyan">Nosotros</a></li>
+                        <li><a href="#silabo" class="text-muted text-decoration-none hover-cyan">Sílabo Interactivo</a>
+                        </li>
+                        <li><a href="#cursos" class="text-muted text-decoration-none hover-cyan">Cursos</a></li>
+                        <li><a href="#docentes" class="text-muted text-decoration-none hover-cyan">Docentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Categorías -->
+                <div class="col-6 col-lg-2">
+                    <h4 class="h6 text-white fw-bold mb-3">Módulos Sílabo</h4>
+                    <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+                        <li><a href="#silabo" class="text-muted text-decoration-none hover-cyan">Timing & Easing</a>
+                        </li>
+                        <li><a href="#silabo" class="text-muted text-decoration-none hover-cyan">Transforms 2D/3D</a>
+                        </li>
+                        <li><a href="#silabo" class="text-muted text-decoration-none hover-cyan">Keyframes CSS</a></li>
+                        <li><a href="#silabo" class="text-muted text-decoration-none hover-cyan">JS Events & DOM</a>
+                        </li>
+                        <li><a href="#silabo" class="text-muted text-decoration-none hover-cyan">GSAP & SVG</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Boletín Informativo -->
+                <div class="col-lg-4">
+                    <h4 class="h6 text-white fw-bold mb-3">Boletín Académico</h4>
+                    <p class="text-muted small mb-3">Suscríbete para recibir novedades de los nuevos inicios de clases y
+                        talleres gratuitos.</p>
+
+                    <form id="newsletterForm" onsubmit="handleNewsletter(event)">
+                        <div class="input-group">
+                            <input type="email" id="newsletterEmail"
+                                class="form-control bg-dark border-secondary text-white"
+                                placeholder="Tu correo electrónico" required>
+                            <button class="btn btn-gradient" type="submit">Suscribir</button>
+                        </div>
+                        <div id="newsletterFeedback" class="small mt-2"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div
+                class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <span class="text-muted small">&copy; 2026 EduAnimates Academy - IESTP Trujillo. Todos los derechos
+                    reservados.</span>
+                <div class="d-flex gap-3 text-muted small">
+                    <a href="#" class="text-muted text-decoration-none hover-cyan">Política de Privacidad</a>
+                    <a href="#" class="text-muted text-decoration-none hover-cyan">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Volver Arriba -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- MODAL DE INICIAR SESIÓN -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark-card border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-white fw-bold" id="loginModalLabel"><i
+                            class="fa-solid fa-right-to-bracket text-cyan me-2"></i>Iniciar Sesión</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="handleDemoSubmit(event, 'Inicio de sesión simulado correctamente.')">
+                        <div class="mb-3">
+                            <label class="form-label text-light small">Correo Institucional o Usuario</label>
+                            <input type="text" class="form-control bg-dark border-secondary text-white" required
+                                placeholder="estudiante@iestptrujillo.edu.pe">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-light small">Contraseña</label>
+                            <input type="password" class="form-control bg-dark border-secondary text-white" required
+                                placeholder="••••••••">
+                        </div>
+                        <button type="submit" class="btn btn-gradient w-100">Acceder al Aula Virtual</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE REGISTRO -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark-card border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-white fw-bold" id="registerModalLabel"><i
+                            class="fa-solid fa-user-plus text-cyan me-2"></i>Registro de Postulante</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="handleDemoSubmit(event, 'Registro de demostración completado con éxito.')">
+                        <div class="mb-3">
+                            <label class="form-label text-light small">Nombres y Apellidos Completo</label>
+                            <input type="text" class="form-control bg-dark border-secondary text-white" required
+                                placeholder="Juan Pérez">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-light small">Correo Electrónico</label>
+                            <input type="email" class="form-control bg-dark border-secondary text-white" required
+                                placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-light small">Programa de Interés</label>
+                            <select class="form-select bg-dark border-secondary text-white">
+                                <option>Diseño y Programación Web (Animación Web)</option>
+                                <option>Front-End & GSAP Master</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-gradient w-100">Crear Cuenta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DINÁMICO DE DETALLES DE CURSO -->
+    <div class="modal fade" id="courseDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark-card border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-white fw-bold" id="modalCourseTitle">Detalle del Curso</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-cyan fw-semibold mb-2" id="modalCourseTeacher">Docente</div>
+                    <p class="text-muted small" id="modalCourseDesc">Descripción del programa.</p>
+                    <div
+                        class="p-3 bg-dark rounded-3 border border-secondary d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-light small">Inversión Promocional:</span>
+                        <span class="fw-bold text-cyan fs-5" id="modalCoursePrice">S/ 0.00</span>
+                    </div>
+                    <button class="btn btn-gradient w-100"
+                        onclick="handleDemoSubmit(event, 'Solicitud de matrícula recibida en modo demostración.')">Prematricularme
+                        Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST DE NOTIFICACIÓN CUSTOM (Sustituye alert()) -->
+    <div class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index: 1080;">
+        <div id="customToast" class="toast bg-dark text-white border-cyan" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="toast-header bg-dark-card text-cyan border-secondary">
+                <i class="fa-solid fa-circle-info me-2"></i>
+                <strong class="me-auto">EduAnimates System</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                Mensaje de notificación.
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="/JS/script.js"></script>
+</body>
+
+</html>
